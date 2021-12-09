@@ -1,7 +1,8 @@
-package com.example.password_manager.data.local
+package com.example.password_manager.data.local.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.password_manager.data.local.db.entities.AuthenticationDataItem
 
 @Dao
 interface AuthenticationDataDao {

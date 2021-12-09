@@ -1,4 +1,4 @@
-package com.example.password_manager.data.local
+package com.example.password_manager.data.local.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -14,5 +14,5 @@ data class AuthenticationDataItem(
     var password: String
 ) {
     @PrimaryKey(autoGenerate = true)
-    val id: Int? = null
+    var id: Int? = null
 }

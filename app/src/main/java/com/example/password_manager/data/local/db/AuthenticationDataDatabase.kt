@@ -1,9 +1,10 @@
-package com.example.password_manager.data.local
+package com.example.password_manager.data.local.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.password_manager.data.local.db.entities.AuthenticationDataItem
 
 @Database(
     entities = [AuthenticationDataItem::class],
