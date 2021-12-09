@@ -20,6 +20,7 @@ class EditAuthenticationDataDialog(
         setContentView(R.layout.dialog_edit_authentication_data)
 
         tvAdd.setOnClickListener {
+
             val title = etTitleEdit.text.toString()
             val login = etLoginEdit.text.toString()
             val password = etPasswordEdit.text.toString()

@@ -10,5 +10,7 @@ class AuthenticationDataRepository(
 
     suspend fun deleteAuthenticationDataItem(authenticationDataItem: AuthenticationDataItem) = db.getAuthenticationDataDao().deleteAuthenticationDataItem(authenticationDataItem)
 
+    suspend fun updateAuthenticationDataItem(authenticationDataItem: AuthenticationDataItem) = db.getAuthenticationDataDao().updateAuthenticationDataItem(authenticationDataItem)
+
     fun observeAuthenticationDataItems() = db.getAuthenticationDataDao().observeAuthenticationDataItems()
 }

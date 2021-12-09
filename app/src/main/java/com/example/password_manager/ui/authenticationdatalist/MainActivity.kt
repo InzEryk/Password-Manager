@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.password_manager.R
 import com.example.password_manager.data.local.db.AuthenticationDataDatabase
+import com.example.password_manager.data.local.db.entities.AuthenticationDataItem
 import com.example.password_manager.data.local.repositories.AuthenticationDataRepository
 import com.example.password_manager.other.AuthenticationDataAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,6 +35,15 @@ class MainActivity : AppCompatActivity() {
             adapter.items = it
             adapter.notifyDataSetChanged()
         })
+
+        buttonAdd.setOnClickListener {
+            val title = etTitleAdd.text.toString()
+            val login = etLoginAdd.text.toString()
+            val password = etPasswordAdd.text.toString()
+
+            val item = AuthenticationDataItem(title, login, password)
+            viewModel.insertAuthenticationDataItem(item)
+        }
 
 
     }

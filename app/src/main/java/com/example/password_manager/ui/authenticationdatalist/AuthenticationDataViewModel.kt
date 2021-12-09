@@ -21,5 +21,10 @@ class AuthenticationDataViewModel(
             repository.deleteAuthenticationDataItem(authenticationDataItem)
         }
 
+    fun updateAuthenticationDataItem(authenticationDataItem: AuthenticationDataItem) = CoroutineScope(Dispatchers.Main)
+        .launch {
+            repository.updateAuthenticationDataItem(authenticationDataItem)
+        }
+
     fun observeAuthenticationDataItems() = repository.observeAuthenticationDataItems()
 }

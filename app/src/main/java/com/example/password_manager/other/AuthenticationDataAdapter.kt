@@ -72,9 +72,10 @@ class AuthenticationDataAdapter(
                         Toast.makeText(context, "Record deleted", Toast.LENGTH_SHORT).show()
                     }
                     R.id.edit -> {
-                        EditAuthenticationDataDialog(context, object : EditDialogListener {
-                            override fun onEditButtonClicked(authenticationDataItem: AuthenticationDataItem) {
-                                viewModel.insertAuthenticationDataItem(authenticationDataItem)
+
+                        EditAuthenticationDataDialog(context, object: EditDialogListener {
+                             override fun onEditButtonClicked(authenticationDataItem: AuthenticationDataItem) {
+                                 viewModel.updateAuthenticationDataItem(authenticationDataItem)
                             }
                         }).show()
                         Toast.makeText(context, "Enter edit window", Toast.LENGTH_SHORT).show()

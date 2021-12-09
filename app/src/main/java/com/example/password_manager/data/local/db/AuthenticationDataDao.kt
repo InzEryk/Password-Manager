@@ -13,6 +13,9 @@ interface AuthenticationDataDao {
     @Delete
     suspend fun deleteAuthenticationDataItem(authenticationDataItem: AuthenticationDataItem)
 
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun updateAuthenticationDataItem(authenticationDataItem: AuthenticationDataItem)
+
     @Query("SELECT * FROM authentication_data_items")
     fun observeAuthenticationDataItems(): LiveData<List<AuthenticationDataItem>>
 

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".ui.authenticationdatalist.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -17,35 +16,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_title"
+        android:id="@+id/etTitleAdd"
         android:hint="Enter title "
         android:maxLength="10"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/editText_login"
-        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintBottom_toTopOf="@+id/etLoginAdd"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText_login"
+        android:id="@+id/etLoginAdd"
         android:hint="Enter login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/editText_password"
-        app:layout_constraintEnd_toEndOf="@+id/editText_password"
+        app:layout_constraintBottom_toTopOf="@+id/etPasswordAdd"
+        app:layout_constraintEnd_toEndOf="@+id/etPasswordAdd"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText_password"
+        android:id="@+id/etPasswordAdd"
         android:hint="Enter password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/addButton"
+        android:id="@+id/buttonAdd"
         android:text="Add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
