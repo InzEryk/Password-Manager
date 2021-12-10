@@ -75,7 +75,12 @@ class AuthenticationDataAdapter(
 
                         EditAuthenticationDataDialog(context, object: EditDialogListener {
                              override fun onEditButtonClicked(authenticationDataItem: AuthenticationDataItem) {
-                                 viewModel.updateAuthenticationDataItem(authenticationDataItem)
+                                 currentAuthenticationDataItem.apply {
+                                     title=authenticationDataItem.title
+                                     login=authenticationDataItem.login
+                                     password=authenticationDataItem.password
+                                 }
+                                 viewModel.updateAuthenticationDataItem(currentAuthenticationDataItem)
                             }
                         }).show()
                         Toast.makeText(context, "Enter edit window", Toast.LENGTH_SHORT).show()
